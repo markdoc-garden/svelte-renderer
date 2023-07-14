@@ -1,11 +1,11 @@
 import type { Config as MarkdocTransformConfig } from "@markdoc/markdoc";
 import type { Processed, PreprocessorGroup } from "svelte/compiler";
-import type { Plugin, PluginReturn } from "./plugins.d.ts";
+import type { Plugin, PluginReturn } from "./plugins.js";
 import type { SvelteComponent } from "svelte";
 
 import md from "@markdoc/markdoc";
 import { parse as YAMLparse } from "yaml";
-import { FileFinder } from "./loader.js";
+import { FileFinder } from "./file_loader.js";
 
 export type { Plugin, PluginReturn };
 export type MarkdocOptions = {
