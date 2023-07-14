@@ -8,11 +8,9 @@ const adapter = autoAdapter();
 const alias = {
   "@static/*": "static/*",
   "@components/*": "src/components/*",
-  "@content/*": "src/content/*",
-  "@layouts/*": "src/layouts/*",
-  "@lib/*": "src/lib/*",
-  "@markdoc/*": "src/markdoc-pipe/*",
   "@routes/*": "src/routes/*",
+  "@lib/*": "src/lib/*",
+  "@mdoc-garden/svelte-renderer": "src/lib/index."
 };
 
 /** @type {import('@sveltejs/kit').Config} */
