@@ -1,0 +1,13 @@
+trailingComma: "all"
+quoteProps: "consistent"
+endOfLine: "lf"
+printWidth: 100
+
+pluginSearchDirs: ["."]
+plugins:
+  - prettier-plugin-svelte
+
+overrides:
+  - files: "*.svelte"
+    options:
+      parser: svelte
