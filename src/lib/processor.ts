@@ -1,6 +1,5 @@
 import type { Config as MarkdocTransformConfig } from "@markdoc/markdoc";
 import type { Plugin, PluginReturn } from "./plugins.js";
-import type { SvelteComponent } from "svelte";
 
 import md from "@markdoc/markdoc";
 import { parse as YAMLparse } from "yaml";
@@ -8,7 +7,6 @@ import { parse as YAMLparse } from "yaml";
 type MDProcessInputs = {
   content: string;
   config: MarkdocTransformConfig;
-  components: SvelteComponent;
   plugins: Plugin[];
 };
 

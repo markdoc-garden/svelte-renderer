@@ -12,19 +12,19 @@ export type { Plugin, PluginReturn } from "./plugins.js";
 
 type MarkdocProcessorConfig = {
   extensions: string[];
-  markdocConfigPath: string;
+  markdocConfigPath?: string;
 };
 
 type MarkupReturn = void | Processed;
 
 class MarkdocProcessor {
-  private options: MarkdocProcessorConfig;
-  private defaultOptions: MarkdocProcessorConfig = {
+  private options: Required<MarkdocProcessorConfig>;
+  private defaultOptions = {
     extensions: [".mdoc", ".markdoc"],
-    markdocConfigPath: "src/markdocConfigPath.",
+    markdocConfigPath: "src/lib/markdoc.config.js",
   };
 
-  constructor(markdocConfig: Partial<MarkdocProcessorConfig>) {
+  constructor(markdocConfig: MarkdocProcessorConfig) {
     this.options = { ...markdocConfig, ...this.defaultOptions };
   }
 
@@ -38,11 +38,11 @@ class MarkdocProcessor {
 
   private useSvelteRenderer(content: string) {
     return `<script lang="ts">
-  import { Renderer, processMarkdown } from "@mdoc-garden/svelte-renderer";
+  import { Renderer, processMarkdown } from "@markdoc-garden/svelte-renderer";
   import { components, config, plugins } from "${this.findConfigFilePath()}";
 
   const content = \`${content}\`;
-  const input = { content, components, config, plugins };
+  const input = { content, config, plugins };
 </script>
 
 {#await processMarkdown(input) then renderableTree}

@@ -10,7 +10,7 @@ const alias = {
   "@components/*": "src/components/*",
   "@routes/*": "src/routes/*",
   "@lib/*": "src/lib/*",
-  "@mdoc-garden/svelte-renderer": "src/lib/index."
+  "@markdoc-garden/svelte-renderer": "src/lib/index",
 };
 
 /** @type {import('@sveltejs/kit').Config} */
