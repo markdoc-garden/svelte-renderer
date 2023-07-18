@@ -25,7 +25,7 @@ jobs:
         with:
           node-version: 18.x
           cache: pnpm
-      
+
       - name: Install all deps
         run: pnpm install --frozen-lockfile
 

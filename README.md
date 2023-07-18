@@ -113,7 +113,7 @@ title: Simbaaaaa!
 
 ### Layouts
 
-Since it transpiles to simple svelte components, you can add layouts and more! Simply use the standard `+layout` structure of svelte-kit and it *simply* works!
+Since it transpiles to simple svelte components, you can add layouts and more! Simply use the standard `+layout` structure of svelte-kit and it _simply_ works!
 
 ### Plugins
 
