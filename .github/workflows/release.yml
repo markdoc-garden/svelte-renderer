@@ -11,6 +11,9 @@ jobs:
   release:
     if: ${{ github.repository == 'markdoc-garden/svelte-renderer' }}
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v3
