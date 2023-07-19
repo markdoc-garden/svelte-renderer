@@ -1,16 +1,16 @@
 <h1 align="center">@markdoc-garden/svelte-renderer</h1>
 
-> Packaging tool use to transpile between [Markdoc](https://markdoc.dev) for your templating needs and [Svelte](https://svelte.dev) as your base Javascript framework. It allows you to render markdoc directly using a pre-processor or use a svelte component to render generated markdown trees - as and when necessary.
+> Packaging tool used to transpile between [Markdoc](https://markdoc.dev) for your templating needs and [Svelte](https://svelte.dev) as your base Javascript framework. It allows you to render markdoc directly using a pre-processor or use a svelte component to render generated markdown trees - as and when necessary.
 
 <h2 align="center">Features</h2>
 
 - ✅ Offers a svelte component to render markdoc snippets.
 - ✅ Offers a svelte preprocessor to render markdoc files as svelte files.
 - ✅ Integrates with svelte-kit with ease, along with layouts.
-- ✅ Uses a simple config file to get markdoc configuration and custom svelte commponents.
+- ✅ Uses a simple config file to get markdoc configuration and custom svelte components.
 - ✅ Provides a plugin API with basic typing to parse [markdoc-rendered, post-parsing AST](https://markdoc.dev/docs/render#parse).
 - ✅ Pipes results from frontmatter and plugins into variables.
-- ✅ First class typescript usage, follows conventions set by svelte-kit documentation.
+- ✅ First class typescript usage, follows conventions set by the svelte-kit documentation.
 
 <h2 align="center">Usage</h2>
 
@@ -22,7 +22,7 @@
 
 ### As a preprocessor
 
-The first step is to add it to your svelte configuration. NOTE, that this preprocessor _must_ be passed before `vitePreprocess` and extensions must include _only_ those files that are markdoc pages.
+The first step is to add the following to your svelte configuration. NOTE, that this preprocessor _must_ be passed before `vitePreprocess` and extensions must include _only_ those files that are markdoc pages.
 
 ```js
 // svelte.config.js
