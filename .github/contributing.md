@@ -32,9 +32,9 @@ pnpm dlx npm-merge-driver install --driver-name pnpm-merge-driver --driver "pnpm
 
 ### Useful scripts
 
-This section mainly addresses what scripts are used for, in this repository. You'll find all of them under `package.json/scripts`.
+This section mainly addresses what scripts are used for in this repository. You'll find all of them under `package.json/scripts`.
 
-Scripts prefixed with `app:*` are related to the website for documenting and handling the changes about the package. It lives under `src/routes`.
+Scripts prefixed with `app:*` are related to the website for documenting and handling the changes regarding the package. It lives under `src/routes`.
 
 ```json5
 {
@@ -43,7 +43,7 @@ Scripts prefixed with `app:*` are related to the website for documenting and han
 }
 ```
 
-Scripts prefixed with `package:*` are related to the package itself, that lives under `src/lib`.
+Scripts prefixed with `package:*` are related to the package itself, which lives under `src/lib`.
 
 ```json5
 {
@@ -80,7 +80,7 @@ The rest of the scripts include miscellaneous tasks like linting, formatting and
 
 At it's core, every little change - regardless of how big or small it is, should follow the pattern of **one issue, one branch, and one pull request**. The main aim is that at any time down-the-line you can traverse your way from a piece of code via changesets to a commit on a pull request, and issue explaining the motivations behind it. We use changesets to facilitate this process.
 
-To start working, initiate an issue. This helps for a flow of ideas to pass between people on any matter, regardless of how minor it is, or if you have a solution ready. Follow it up with an appropirately named branch, according to [the branch conventions](#branch-conventions). Once you are done, create a changeset to describe your changes, if it is a patch, minor or major change, with the `package:change` command, regardless of where you've made the changes. You do not need to create one if it's about the app itself.
+To start working, initiate an issue. This helps for a flow of ideas to pass between people on any matter, regardless of how minor it is, or if you have a solution ready. Follow it up with a branch named appropriately according to [the branch conventions](#branch-conventions). Once you are done, create a changeset to describe your changes. If it is a patch, minor or major change, with the `package:change` command, regardless of where you've made the changes. You do not need to create one if it's about the app itself.
 
 Once you are done, open a pull request to the `dev` branch, not to `main` ([branch conventions strike again](#branch-conventions)) - and your code will be up for review. Once it gets satisfactorily reviewed, it can be merged. **However**, in the case of it being a part of a feature chain, or a singular planned bump - it gets merged to an integration branch which is later merged to `dev`.
 
