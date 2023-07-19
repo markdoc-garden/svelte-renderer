@@ -1,12 +1,12 @@
 # Contributing guidelines
 
-Heya there, o/. This is the base repository for the `svelte-renderer` package. It aims to provide a smooth interface for reading the code for the latest, released version of the package. `svelte-renderer` acts as a binding point between using [Markdoc](https://markdoc.dev) for your templating needs and [Svelte](https://svelte.dev) as your base Javascript framework. It allows you to render markdoc directly using a pre-processor or use a svelte component to render generated markdown trees - as and when necessary.
+Heya there, o/. This is the base repository for the `svelte-renderer` package. It aims to provide a smooth interface for reading the code for the latest released version of the package. `svelte-renderer` acts as a binding point between using [Markdoc](https://markdoc.dev) for your templating needs and [Svelte](https://svelte.dev) as your base Javascript framework. It allows you to render markdoc directly using a pre-processor or use a svelte component to render generated markdown trees - as and when necessary.
 
 The [Open Source Guides website](https://opensource.guide) has a collection of resources for individuals, communities, and companies. These resources help people who want to learn how to run and contribute to open source projects.
 
 ## Quick setup
 
-#### Prerequisites
+### Prerequisites
 
 ```yaml
 # it may not work without these
@@ -14,7 +14,7 @@ node: "^>=18.0.0"
 pnpm: "^8.6.2"
 ```
 
-#### Setting up your local repository
+### Setting up your local repository
 
 This project follows the official [Sveltekit package guidelines](https://kit.svelte.dev/docs/packaging), while modifying certain basic components like script names. Using `pnpm install` from the top level helps you get started.
 
@@ -30,7 +30,7 @@ pnpm add -g @pnpm/merge-driver
 pnpm dlx npm-merge-driver install --driver-name pnpm-merge-driver --driver "pnpm-merge-driver %A %O %B %P" --files pnpm-lock.yaml
 ```
 
-#### Useful scripts
+### Useful scripts
 
 This section mainly addresses what scripts are used for, in this repository. You'll find all of them under `package.json/scripts`.
 
@@ -86,19 +86,19 @@ Once you are done, open a pull request to the `dev` branch, not to `main` ([bran
 
 ## Branch conventions
 
-#### `main`
+### `main`
 
 The main branch points to a mirror of the package, currently shipped to npm for distribution. This is to allow for easy reading of the source code at any particular point of time. Any project using a package usually point to this.
 
-#### `dev`
+### `dev`
 
 The in-development branch for this project usually reflects the "latest" version of code, and acts as a base to resolve merge conflicts.
 
-#### `feat/[name]`
+### `feat/[name]`
 
 These are feature branches, usually created to work on any changes, and are made to make a pull-request from. These include any type of individual change, addressing an issue.
 
-#### `integration/[version]`
+### `integration/[version]`
 
 These are integration branches usually used to act as a base for individual feature branches that result into a single bump. While uncommon for smaller changes, it can be helpful to map roadmaps with pull-requests.
 
