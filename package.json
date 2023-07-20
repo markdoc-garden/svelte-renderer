@@ -1,6 +1,6 @@
 {
   "name": "@markdoc-garden/svelte-renderer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "description": "Render your Markdoc files in Svelte(kit).",
   "homepage": "https://github.com/markdoc-garden/svelte-renderer",
