@@ -1,2 +1,4 @@
 - Make it independant on features relied on by vitePreprocessor
 - Make it smoother to add extensions
+- svelte-add integration
+- actually test it in a website
